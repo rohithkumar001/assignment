@@ -1,0 +1,15 @@
+<h3>child Component:</h3>
+<div >
+   <table>
+       <tr>
+           <th>Description</th>
+           <th>Severity</th>
+           <th>Status</th>
+       </tr>
+       <tr *ngFor="let data of arraydata;index as i">
+           <td>{{data[0]}}</td>
+           <td>{{data[1]}}</td>
+           <td>{{data[2]}}</td>
+       </tr>
+   </table>
+</div>

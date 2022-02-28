@@ -1,0 +1,22 @@
+<app-child [arraydata]="arraydata"></app-child>
+<h3>Parent Component:</h3>
+<form [formGroup]="formData" (ngSubmit)="onSubmit()">
+    <label for="desc">Description:</label> 
+    <input type="text" id="desc" name="desc" formControlName="desc"><br>
+    <label for="type">Severity</label>
+    <select id="type"formControlName="type">
+    <option value="Minor">Minor</option>
+    <option value="Major">Major</option>
+    <option value="Critical">Critical</option>
+    </select><br>
+    <div>
+        Status:
+        <ul class="list-group">
+              <li class="list-group-item"  *ngFor="let item of itemsList">
+                <input type="radio" value="{{item.value}}" formControlName="ite"/> 
+                {{item.name}}
+              </li>
+        </ul>
+      </div>
+    <button type="submit">Add Issue</button>
+</form>
